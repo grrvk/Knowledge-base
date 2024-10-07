@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl/"
+     xml:base="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:lab2="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#part_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#owns -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#owns">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#part_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#part_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs_after_education -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs_after_education">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#used_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#used_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#hasName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Air_filter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Air_filter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Auto_part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Animal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Auto_part -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Auto_part">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#part_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Car"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Bass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Bass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Fish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Bird -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Bird">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Brain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Claws"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Heart"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Lungs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Wings"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Flying"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Walking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#BodyPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#BodyPart"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Brain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Brain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Bream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Bream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Fish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Car -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Car">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Riding"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#used_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Human"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Cat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Cat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Mammal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Swimming"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Chef -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Chef">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Human"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Cooking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Claws -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Claws">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Cooking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Cooking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Doctor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Doctor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Human"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Treating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Dog -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Dog">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Mammal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Swimming"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Driving -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Driving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Eagle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Eagle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Bird"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Auto_part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Fish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Fish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Brain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Gills"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Heart"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Swimming"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Flying -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Flying">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Moving"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Gills -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Gills">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Heart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Heart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Honda_Civic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Honda_Civic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Mammal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs_after_education"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Driving"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs_after_education"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Swimming"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Lungs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Lungs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Mammal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Mammal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Animal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Brain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Heart"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#has_a"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Lungs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Walking"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Moving -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Moving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Penguin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Penguin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Bird"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Swimming"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Pigeon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Pigeon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Bird"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Riding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Riding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Moving"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Swimming -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Swimming">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Moving"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Toyota_Corolla -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Toyota_Corolla">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Car"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Treating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Treating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Walking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Walking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Moving"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Wheel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Wheel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Auto_part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Wings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Wings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Birman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Birman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Cat"/>
+        <owl:differentFrom rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#British_Longhair"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#British_Longhair -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#British_Longhair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Cat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Nearest_hospital_surgeon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Nearest_hospital_surgeon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Doctor"/>
+        <lab2:owns rdf:resource="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Birman"/>
+        <lab2:hasName>Tom</lab2:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Air_filter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Engine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Wheel"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Claws"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Gills"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Heart"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Lungs"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Wings"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Cooking"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Driving"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Moving"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Treating"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Flying"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Riding"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Swimming"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vika/ontologies/2024/9/lab2.owl#Walking"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
